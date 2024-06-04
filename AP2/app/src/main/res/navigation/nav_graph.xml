@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.ulbra.ap2.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_creandoProdutoFragment2"
+            app:destination="@id/creandoProdutoFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_detalheProdutoActivity2"
+            app:destination="@id/detalheProdutoActivity2" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/creandoProdutoFragment2"
+        android:name="br.com.ulbra.ap2.CreandoProdutoFragment"
+        android:label="fragment_creando_produto"
+        tools:layout="@layout/fragment_creando_produto" >
+        <action
+            android:id="@+id/action_creandoProdutoFragment2_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/detalheProdutoActivity2"
+        android:name="br.com.ulbra.ap2.DetalheProdutoActivity"
+        android:label="activity_detalhe_produto"
+        tools:layout="@layout/activity_detalhe_produto" />
+
+</navigation>
